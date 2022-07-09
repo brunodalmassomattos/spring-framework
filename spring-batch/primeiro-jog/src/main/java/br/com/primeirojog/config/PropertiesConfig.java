@@ -11,7 +11,7 @@ public class PropertiesConfig {
 	@Bean
 	public PropertySourcesPlaceholderConfigurer config() {
 		PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
-		configurer.setLocation(new FileSystemResource("/Temp/batch/primeirojog/application.properties"));
+		configurer.setLocation(new FileSystemResource("/Suporte_Config/batch/primeirojog/application.properties"));
 		return configurer;
 	}
 }
