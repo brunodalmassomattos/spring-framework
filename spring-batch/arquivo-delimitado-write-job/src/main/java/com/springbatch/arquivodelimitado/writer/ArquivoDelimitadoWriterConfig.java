@@ -1,4 +1,4 @@
-package com.springbatch.arquivolargurafixa.writer;
+package com.springbatch.arquivodelimitado.writer;
 
 import org.springframework.batch.item.file.FlatFileItemWriter;
 import org.springframework.batch.item.file.builder.FlatFileItemWriterBuilder;
@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 
-import com.springbatch.arquivolargurafixa.dominio.Cliente;
+import com.springbatch.arquivodelimitado.dominio.Cliente;
 
 @Configuration
-public class ArquivoLarguraFixaWriterConfig {
+public class ArquivoDelimitadoWriterConfig {
 	
 	@Value("${arquivos.clientes.saida}")
 	private Resource arquivoClientesSaida;
@@ -20,8 +20,8 @@ public class ArquivoLarguraFixaWriterConfig {
 		return new FlatFileItemWriterBuilder<Cliente>()
 				.name("escritaArquivoLarguraFixaWriter")
 				.resource(arquivoClientesSaida)
-				.formatted()
-				.format("%-9s %-9s %2s %-19s")
+				.delimited()
+//				.delimiter(";") /** PARA DETERMINAR UM LIMITADOS **/
 				.names("nome", "sobrenome", "idade", "email")
 				.build();
 	}
