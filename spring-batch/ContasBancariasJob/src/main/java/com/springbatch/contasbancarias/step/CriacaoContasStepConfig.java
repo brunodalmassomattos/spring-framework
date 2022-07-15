@@ -5,7 +5,7 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.ItemWriter;
+import org.springframework.batch.item.support.CompositeItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +22,7 @@ public class CriacaoContasStepConfig {
 	public Step criacaoContasStep(
 			ItemReader<Cliente> leituraClientesReader, 
 			ItemProcessor<Cliente, Conta> geracaoContaProcessor,
-			ItemWriter<Conta> jdbcContaWriter) {
+			CompositeItemWriter<Conta> jdbcContaWriter) {
 		return stepBuilderFactory
 				.get("criacaoContasStep")
 				.<Cliente, Conta>chunk(100)
