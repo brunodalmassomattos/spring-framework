@@ -1,7 +1,6 @@
-package br.com.faturacartaocreditojob.dominio;
+package com.springbatch.faturacartaocredito.dominio;
 
 public class CartaoCredito {
-
 	private int numeroCartaoCredito;
 	private Cliente cliente;
 

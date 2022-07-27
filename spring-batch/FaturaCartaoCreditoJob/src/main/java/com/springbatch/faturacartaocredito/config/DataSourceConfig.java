@@ -1,4 +1,4 @@
-package br.com.faturacartaocreditojob.config;
+package com.springbatch.faturacartaocredito.config;
 
 import javax.sql.DataSource;
 
@@ -10,16 +10,15 @@ import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class DataSourceConfig {
-	
-	@Bean
 	@Primary
-	@ConfigurationProperties(prefix = "spring.datasource")
+	@Bean
+	@ConfigurationProperties(prefix="spring.datasource")
 	public DataSource springDataSource() {
 		return DataSourceBuilder.create().build();
 	}
-
+	
 	@Bean
-	@ConfigurationProperties(prefix = "app.datasource")
+	@ConfigurationProperties(prefix="app.datasource")
 	public DataSource appDataSource() {
 		return DataSourceBuilder.create().build();
 	}

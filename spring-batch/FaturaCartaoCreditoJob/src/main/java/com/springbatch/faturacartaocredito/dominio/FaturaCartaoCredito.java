@@ -1,17 +1,12 @@
-package br.com.faturacartaocreditojob.dominio;
+package com.springbatch.faturacartaocredito.dominio;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FaturaCartaoCredito {
-
 	private Cliente cliente;
 	private CartaoCredito cartaoCredito;
-	private List<Transacao> transacoes;
-
-	public FaturaCartaoCredito() {
-		this.transacoes = new ArrayList<Transacao>();
-	}
+	private List<Transacao> transacoes = new ArrayList<>();
 
 	public Cliente getCliente() {
 		return cliente;
@@ -37,4 +32,10 @@ public class FaturaCartaoCredito {
 		this.transacoes = transacoes;
 	}
 
+	public Double getTotal() {
+		return transacoes
+				.stream()
+				.mapToDouble(Transacao::getValor)
+				.reduce(0.0, Double::sum);
+	}
 }
