@@ -1,4 +1,4 @@
-package med.voll.api.dao;
+package med.voll.api.dao.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
