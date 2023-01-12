@@ -12,6 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import med.voll.api.records.medicos.DadosAtualizacaoMedico;
 import med.voll.api.records.medicos.DadosCadastroMedico;
 import med.voll.api.records.medicos.Especialidade;
 
@@ -30,6 +31,7 @@ public class Medico {
 	private String email;
 	private String crm;
 	private String telefone;
+	private boolean ativo;
 
 	@Enumerated(EnumType.STRING)
 	private Especialidade especialidade;
@@ -42,7 +44,26 @@ public class Medico {
 		this.email = dados.email();
 		this.crm = dados.crm();
 		this.telefone = dados.telefone();
+		this.ativo = Boolean.TRUE;
 		this.especialidade = dados.especialidade();
 		this.endereco = new Endereco(dados.dadosEndereco());
+	}
+
+	public void atualizarInformacoes(DadosAtualizacaoMedico dados) {
+		if (dados.nome() != null) {
+			this.nome = dados.nome();
+		}
+
+		if (dados.telefone() != null) {
+			this.telefone = dados.telefone();
+		}
+
+		if (dados.dadosEndereco() != null) {
+			this.endereco.atualizarInformacoes(dados.dadosEndereco());
+		}
+	}
+
+	public void excluir() {
+		this.ativo = false;
 	}
 }
