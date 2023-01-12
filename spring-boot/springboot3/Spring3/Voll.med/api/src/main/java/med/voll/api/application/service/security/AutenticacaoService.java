@@ -1,4 +1,4 @@
-package med.voll.api.application.service.exception;
+package med.voll.api.application.service.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
