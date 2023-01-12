@@ -1,6 +1,4 @@
-package med.voll.api.records.medicos;
-
-import med.voll.api.dao.medico.Medico;
+package med.voll.api.domain.medico;
 
 public record DadosListarMedico(Long id, String nome, String email, String crm, Especialidade especialidade) {
 

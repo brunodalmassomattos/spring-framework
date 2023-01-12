@@ -1,4 +1,4 @@
-package med.voll.api.dao.paciente;
+package med.voll.api.domain.paciente;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -10,9 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.dao.endereco.Endereco;
-import med.voll.api.records.paciente.DadosAtualizacaoPaciente;
-import med.voll.api.records.paciente.DadosCadastroPaciente;
+import med.voll.api.domain.endereco.Endereco;
 
 @Table(name = "pacientes")
 @Entity(name = "Paciente")

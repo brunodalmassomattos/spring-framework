@@ -1,4 +1,4 @@
-package med.voll.api.dao.medico;
+package med.voll.api.domain.medico;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -12,10 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import med.voll.api.dao.endereco.Endereco;
-import med.voll.api.records.medicos.DadosAtualizacaoMedico;
-import med.voll.api.records.medicos.DadosCadastroMedico;
-import med.voll.api.records.medicos.Especialidade;
+import med.voll.api.domain.endereco.Endereco;
 
 @Data
 @NoArgsConstructor
