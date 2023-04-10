@@ -1,0 +1,11 @@
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\model\Status.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\dto\PedidoDto.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\dto\ItemDoPedidoDto.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\controller\PedidoController.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\dto\StatusDto.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\repository\PedidoRepository.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\model\Pedido.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\service\PedidoService.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\config\Configuracao.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\model\ItemDoPedido.java
+D:\desenvolvimento\microsservicos\pedidos\src\main\java\br\com\alurafood\pedidos\PedidosApplication.java
