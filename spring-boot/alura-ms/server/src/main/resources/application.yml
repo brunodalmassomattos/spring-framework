@@ -1,0 +1,16 @@
+eureka:
+  client:
+    fetch-registry: 'false'
+    register-with-eureka: 'false'
+    serviceUrl:
+      defaultZone: http://localhost:8081/
+
+spring:
+  application:
+    name: server
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+
+server:
+  port: '8081'
